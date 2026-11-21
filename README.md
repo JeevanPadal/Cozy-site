@@ -2,11 +2,9 @@
 
 A clean, cozy home for movies and TV shows.
 
-- Search with a type option: All, Movies, or TV Shows
-- Movies section
-- TV Shows section, with channel filters for NTV, Kantipur TV, Himalaya TV, AP1 TV and Image Channel
-- Channels section
-- My List
+- Home — clean welcome page, no movies or shows listed here
+- Movies — its own space, with a movies-only search
+- TV Shows — its own space, empty for now
 
 No movies or shows are added yet, on purpose. This is the clean format, ready to fill — we will discuss how to add titles together later.
 
@@ -18,4 +16,4 @@ Open `index.html` in a browser, or view the site on GitHub Pages.
 
 - `index.html` — the page structure
 - `style.css` — the cozy styling
-- `script.js` — search, tabs, filters and sorting. The title list is empty for now: `const TITLES = [];`
+- `script.js` — separate Home / Movies / TV Shows views and the movies-only search. The title list is empty for now: `const TITLES = [];`
