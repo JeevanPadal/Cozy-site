@@ -17,5 +17,5 @@ Open `index.html` in a browser, or view the site on GitHub Pages. Use the menu a
 - `index.html` — the home page
 - `movies.html` — the movies page
 - `shows.html` — the TV shows page
-- `style.css` — the cozy styling
+- `logo.svg` — the JEEVAN logo: red rounded square with a white J, JEEVAN in bold white, THE COZY REEL below. Used in the header of every page and as the site favicon.
 - `script.js` — the movies-only search. The title list is empty for now: `const TITLES = [];`
