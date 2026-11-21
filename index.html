@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Cozy Reel — Movies &amp; TV Shows</title>
-  <meta name="description" content="A clean, cozy home for movies and TV shows. Movies and TV shows each have their own space.">
+  <meta name="description" content="A clean, cozy home for movies and TV shows.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,66 +15,32 @@
   <!-- ======================= TOP BAR ======================= -->
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="logo" href="#" data-view="home">
+      <a class="logo" href="index.html">
         <span class="logo-mark">◐</span>
         <span class="logo-text">The Cozy Reel</span>
         <span class="logo-tag">slow evenings · good stories</span>
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <button class="nav-btn active" data-view="home" type="button">Home</button>
-        <button class="nav-btn" data-view="movies" type="button">Movies</button>
-        <button class="nav-btn" data-view="shows" type="button">TV Shows</button>
+        <a class="nav-btn active" href="index.html">Home</a>
+        <a class="nav-btn" href="movies.html">Movies</a>
+        <a class="nav-btn" href="shows.html">TV Shows</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-
-    <!-- ======================= HOME — CLEAN, NO MOVIES / SHOWS HERE ======================= -->
-    <section class="view active" id="view-home">
-      <div class="hero hero-home">
-        <p class="eyebrow">☕ A clean start — ready to fill</p>
-        <h1>Slow evenings,<br>good stories.</h1>
-        <p class="hero-sub">Welcome to The Cozy Reel. This is a quiet place for movies and TV shows, made for slow evenings.</p>
-        <p class="hero-sub">Movies and TV shows live in their own spaces. Use the menu above to go to them — nothing is added yet, we will add titles together later.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" data-view="movies" type="button">Go to Movies ↓</button>
-          <button class="btn btn-ghost" data-view="shows" type="button">Go to TV Shows</button>
-        </div>
+    <!-- ======================= HOME — WELCOMING PAGE ONLY ======================= -->
+    <div class="hero hero-home">
+      <p class="eyebrow">☕ A clean start — ready to fill</p>
+      <h1>Slow evenings,<br>good stories.</h1>
+      <p class="hero-sub">Welcome to The Cozy Reel. This is a quiet place for movies and TV shows, made for slow evenings.</p>
+      <p class="hero-sub">Movies and TV shows each have their own page. Nothing is added yet — we will add titles together later.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="movies.html">Go to Movies ↓</a>
+        <a class="btn btn-ghost" href="shows.html">Go to TV Shows</a>
       </div>
-    </section>
-
-    <!-- ======================= MOVIES — ITS OWN SPACE, SEARCH MOVIES ONLY ======================= -->
-    <section class="view" id="view-movies">
-      <div class="page-head">
-        <h2>Movies</h2>
-        <p class="muted">Search for a movie below. Only movies are searched here.</p>
-      </div>
-
-      <form class="big-search" id="movieSearchForm" role="search">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" id="movieSearchInput" placeholder="Search movies…" aria-label="Search movies">
-        <button class="btn btn-primary" type="submit">Search</button>
-      </form>
-
-      <div class="results-head">
-        <h2>Movies</h2>
-        <p id="movieResultsCount">0 movies added yet</p>
-      </div>
-      <section class="grid" id="movieGrid" aria-live="polite"></section>
-      <p class="empty-state" id="movieEmptyState">No movies added yet. We will add movies together later.</p>
-    </section>
-
-    <!-- ======================= TV SHOWS — ITS OWN SPACE, EMPTY FOR NOW ======================= -->
-    <section class="view" id="view-shows">
-      <div class="page-head">
-        <h2>TV Shows</h2>
-        <p class="muted">This space is for TV shows.</p>
-      </div>
-      <p class="empty-state">No TV shows added yet. We will add shows together later.</p>
-    </section>
-
+    </div>
   </main>
 
   <footer class="footer">
@@ -83,8 +49,6 @@
       <p class="muted">Clean format, ready to fill. No titles added yet.</p>
     </div>
   </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>

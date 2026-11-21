@@ -1,8 +1,10 @@
 // ============================================================
-// THE COZY REEL — script.js  (v4 — separate spaces)
-// Home is clean: no movies, no shows, no search on the home page.
-// Movies has its own space, with a movies-only search.
-// TV Shows has its own space, and it is empty for now.
+// THE COZY REEL — script.js  (v5 — separate pages)
+// Home is index.html — a welcoming page only.
+// Movies is movies.html — movies only, with a movies-only search.
+// TV Shows is shows.html — shows only, empty for now.
+// This script runs on all three pages, so it only touches
+// the movies search when that search is on the page.
 //
 // WHERE MOVIES WILL GO LATER:
 //   Add them to the TITLES list below, one entry per movie.
@@ -28,49 +30,24 @@
 // ---------- 1. THE CATALOGUE — EMPTY FOR NOW ----------
 const TITLES = [];
 
-// ---------- 2. STATE ----------
-let activeView = "home";   // home | movies | shows
-let movieSearchText = "";
-
-// ---------- 3. FIND THE PARTS OF THE PAGE ----------
+// ---------- 2. MOVIES SEARCH — ONLY ON movies.html ----------
 const movieGrid = document.getElementById("movieGrid");
 const movieResultsCount = document.getElementById("movieResultsCount");
 const movieEmptyState = document.getElementById("movieEmptyState");
 const movieSearchInput = document.getElementById("movieSearchInput");
+const movieSearchForm = document.getElementById("movieSearchForm");
 const toast = document.getElementById("toast");
 
-// ---------- 4. HELPERS ----------
+let movieSearchText = "";
+
 function showToast(message) {
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add("show");
   clearTimeout(showToast._timer);
   showToast._timer = setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
-// ---------- 5. SWITCH SPACE: HOME / MOVIES / TV SHOWS ----------
-// Only one space is shown at a time.
-function showView(view) {
-  activeView = view;
-  document.querySelectorAll(".view").forEach((section) => {
-    section.classList.toggle("active", section.id === "view-" + view);
-  });
-  document.querySelectorAll(".nav-btn[data-view]").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.view === view);
-  });
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  if (view === "movies") renderMovies();
-}
-
-document.querySelectorAll("[data-view]").forEach((el) => {
-  el.addEventListener("click", (event) => {
-    event.preventDefault();
-    showView(el.dataset.view);
-  });
-});
-
-// ---------- 6. MOVIES — SEARCH MOVIES ONLY ----------
-// With TITLES empty, this shows the clean "no movies added yet" message.
-// As soon as we add movies, the same code will draw their cards.
 function getVisibleMovies() {
   return TITLES.filter((item) => {
     if (item.type !== "movie") return false;
@@ -83,6 +60,7 @@ function getVisibleMovies() {
 }
 
 function renderMovies() {
+  if (!movieGrid || !movieResultsCount || !movieEmptyState) return;
   const movies = TITLES.filter((item) => item.type === "movie");
   const list = getVisibleMovies();
 
@@ -101,17 +79,21 @@ function renderMovies() {
   movieGrid.innerHTML = "";
 }
 
-movieSearchInput.addEventListener("input", () => {
-  movieSearchText = movieSearchInput.value.trim().toLowerCase();
-  renderMovies();
-});
+if (movieSearchInput) {
+  movieSearchInput.addEventListener("input", () => {
+    movieSearchText = movieSearchInput.value.trim().toLowerCase();
+    renderMovies();
+  });
+}
 
-document.getElementById("movieSearchForm").addEventListener("submit", (event) => {
-  event.preventDefault();
-  movieSearchText = movieSearchInput.value.trim().toLowerCase();
-  renderMovies();
-  showToast(movieSearchText ? "Searching movies" : "Showing all movies");
-});
+if (movieSearchForm) {
+  movieSearchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    movieSearchText = movieSearchInput.value.trim().toLowerCase();
+    renderMovies();
+    showToast(movieSearchText ? "Searching movies" : "Showing all movies");
+  });
+}
 
-// ---------- 7. FIRST DRAW ----------
+// ---------- 3. FIRST DRAW (movies page only) ----------
 renderMovies();
