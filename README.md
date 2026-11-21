@@ -1,6 +1,6 @@
 # The Cozy Reel
 
-A clean, cozy home for movies and TV shows, with a separate page for each.
+A clean, dark, premium home for movies and TV shows, with a separate page for each. Dark theme, Netflix-like: deep black, cinematic red, clean white type.
 
 - `index.html` — Home, a welcoming page only. No movies, no shows, no search here.
 - `movies.html` — Movies only, with a movies-only search. No shows on this page.
