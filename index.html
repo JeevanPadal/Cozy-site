@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cozy Reel — Movies &amp; TV Shows</title>
+  <meta name="description" content="A clean, cozy home for movies and TV shows. Search, browse, and add titles later — step by step.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================= TOP BAR ======================= -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">◐</span>
+        <span class="logo-text">The Cozy Reel</span>
+        <span class="logo-tag">slow evenings · good stories</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-btn active" data-type="all" type="button">Home</button>
+        <button class="nav-btn" data-type="movie" type="button">Movies</button>
+        <button class="nav-btn" data-type="tv" type="button">TV Shows</button>
+        <button class="nav-btn" data-scroll="channels" type="button">Channels</button>
+        <button class="nav-btn" data-type="watchlist" type="button">My List <span class="count-badge" id="watchlistCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ======================= HERO + SEARCH ======================= -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">☕ A clean start — ready to fill</p>
+        <h1>Slow evenings,<br>good stories.</h1>
+        <p class="hero-sub">This is the clean home for the site. No movies or shows are added yet — we will decide together how to add them later. For now, the search and the sections are ready.</p>
+
+        <!-- SEARCH: choose what to search, then type -->
+        <form class="big-search" id="bigSearchForm" role="search">
+          <label class="search-type-label">Search in
+            <select id="searchType" aria-label="Search type">
+              <option value="all">All</option>
+              <option value="movie">Movies</option>
+              <option value="tv">TV Shows</option>
+            </select>
+          </label>
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="searchInput" placeholder="Search movies or TV shows…" aria-label="Search movies and TV shows">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+        <p class="hero-note">Try the search now — it is ready, and will show “nothing added yet” until we add the first titles together.</p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroMoviesBtn" type="button">Go to Movies ↓</button>
+          <button class="btn btn-ghost" id="heroTvBtn" type="button">Go to TV Shows</button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="hero-card-label">What is ready now</p>
+        <ul>
+          <li>✓ Search, with a Movies / TV Shows option</li>
+          <li>✓ Movies section</li>
+          <li>✓ TV Shows section</li>
+          <li>✓ Channels section</li>
+          <li>✓ My List section</li>
+        </ul>
+        <p class="hero-card-label">What comes later</p>
+        <ul class="muted">
+          <li>• How we add movies</li>
+          <li>• How we add TV shows</li>
+          <li>• Which channels to include</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= FILTERS (ready, no data yet) ======================= -->
+    <section class="filters" aria-label="Filters">
+      <div class="chips" id="genreChips">
+        <button class="chip active" data-genre="all" type="button">All genres</button>
+        <button class="chip" data-genre="Comedy" type="button">Comedy</button>
+        <button class="chip" data-genre="Drama" type="button">Drama</button>
+        <button class="chip" data-genre="Romance" type="button">Romance</button>
+        <button class="chip" data-genre="Family" type="button">Family</button>
+      </div>
+      <label class="sort-label">Sort by
+        <select id="sortSelect">
+          <option value="recommended">Recommended</option>
+          <option value="rating">Highest rated</option>
+          <option value="newest">Newest first</option>
+          <option value="az">A – Z</option>
+        </select>
+      </label>
+    </section>
+
+    <!-- ======================= SEARCH RESULTS ======================= -->
+    <section class="results-head">
+      <h2 id="resultsTitle">Search results</h2>
+      <p id="resultsCount">0 titles added yet</p>
+    </section>
+    <section class="grid" id="cardGrid" aria-live="polite"></section>
+    <p class="empty-state" id="emptyState">Nothing added yet. Use the search above, or go to the Movies or TV Shows section below.</p>
+
+    <!-- ======================= MOVIES SECTION ======================= -->
+    <section class="content-section" id="moviesSection">
+      <div class="section-head">
+        <div>
+          <h2>Movies</h2>
+          <p class="muted">This is where movies will appear. Nothing is added yet — we will add them together later.</p>
+        </div>
+        <span class="section-pill">0 movies</span>
+      </div>
+      <div class="placeholder-grid">
+        <div class="placeholder-card"><span>Movie slot 1</span><p>Coming soon</p></div>
+        <div class="placeholder-card"><span>Movie slot 2</span><p>Coming soon</p></div>
+        <div class="placeholder-card"><span>Movie slot 3</span><p>Coming soon</p></div>
+      </div>
+    </section>
+
+    <!-- ======================= TV SHOWS SECTION ======================= -->
+    <section class="content-section" id="tvSection">
+      <div class="section-head">
+        <div>
+          <h2>TV Shows</h2>
+          <p class="muted">This is where TV shows will appear, grouped by channel. Nothing is added yet.</p>
+        </div>
+        <span class="section-pill">0 shows</span>
+      </div>
+
+      <div class="chips" id="channelChips">
+        <button class="chip active" data-channel="all" type="button">All channels</button>
+        <button class="chip" data-channel="NTV" type="button">NTV</button>
+        <button class="chip" data-channel="Kantipur TV" type="button">Kantipur TV</button>
+        <button class="chip" data-channel="Himalaya TV" type="button">Himalaya TV</button>
+        <button class="chip" data-channel="AP1 TV" type="button">AP1 TV</button>
+        <button class="chip" data-channel="Image Channel" type="button">Image Channel</button>
+      </div>
+
+      <div class="placeholder-grid">
+        <div class="placeholder-card"><span>TV show slot 1</span><p>Coming soon</p></div>
+        <div class="placeholder-card"><span>TV show slot 2</span><p>Coming soon</p></div>
+        <div class="placeholder-card"><span>TV show slot 3</span><p>Coming soon</p></div>
+      </div>
+    </section>
+
+    <!-- ======================= CHANNELS SECTION ======================= -->
+    <section class="content-section" id="channels">
+      <div class="section-head">
+        <div>
+          <h2>Channels</h2>
+          <p class="muted">Channel pages will live here. The names below are placeholders for now — we will confirm the list together later.</p>
+        </div>
+      </div>
+      <div class="channel-grid" id="channelsGrid">
+        <div class="channel-card"><span class="channel-initial">N</span><h3>NTV</h3><p>Shows will appear here.</p></div>
+        <div class="channel-card"><span class="channel-initial">K</span><h3>Kantipur TV</h3><p>Shows will appear here.</p></div>
+        <div class="channel-card"><span class="channel-initial">H</span><h3>Himalaya TV</h3><p>Shows will appear here.</p></div>
+        <div class="channel-card"><span class="channel-initial">A</span><h3>AP1 TV</h3><p>Shows will appear here.</p></div>
+        <div class="channel-card"><span class="channel-initial">I</span><h3>Image Channel</h3><p>Shows will appear here.</p></div>
+        <div class="channel-card"><span class="channel-initial">+</span><h3>More channels</h3><p>We will add them later.</p></div>
+      </div>
+    </section>
+
+    <!-- ======================= MY LIST ======================= -->
+    <section class="mylist">
+      <h2>My List</h2>
+      <p class="muted">Saved titles will appear here once we add titles.</p>
+      <div class="mylist-row" id="watchlistRow">
+        <p class="muted" id="watchlistEmpty">Nothing saved yet.</p>
+      </div>
+    </section>
+
+    <!-- ======================= NEXT STEPS ======================= -->
+    <section class="cozy-note">
+      <h3>What we will decide next</h3>
+      <ol>
+        <li><strong>1. How to add movies</strong> — a few at a time, or a full list?</li>
+        <li><strong>2. How to add TV shows</strong> — by channel, or by show name?</li>
+        <li><strong>3. Where the information comes from</strong> — your list, or a list we research together?</li>
+      </ol>
+      <p class="cozy-note-small">For now, nothing is added on purpose. The clean format is ready, and the search and sections are waiting for that decision.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p><strong>The Cozy Reel</strong> — made for slow evenings.</p>
+      <p class="muted">Clean format, ready to fill. No titles added yet.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
