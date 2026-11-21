@@ -32,7 +32,7 @@
     <!-- ======================= MOVIES — THIS PAGE IS ONLY MOVIES ======================= -->
     <div class="page-head">
       <h2>Movies</h2>
-      <p class="muted">Search for a movie below. Only movies are searched here.</p>
+      <p class="muted">Search for a movie below, then click its card to watch it right here on the site.</p>
     </div>
 
     <form class="big-search" id="movieSearchForm" role="search">
@@ -52,11 +52,25 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <p><strong>The Cozy Reel</strong> — made for slow evenings.</p>
-      <p class="muted">Clean format, ready to fill. No titles added yet.</p>
+      <p class="muted">Movies play here from the makers' official YouTube channels.</p>
     </div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ======================= PLAYER — WATCH ON THE SITE ======================= -->
+  <div class="player-modal" id="playerModal" hidden>
+    <div class="player-box" role="dialog" aria-modal="true" aria-labelledby="playerTitle">
+      <div class="player-head">
+        <h3 id="playerTitle">Watch</h3>
+        <button class="player-close" id="playerClose" type="button" aria-label="Close player">✕</button>
+      </div>
+      <div class="player-frame-wrap">
+        <iframe id="playerFrame" src="" title="Movie player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="player-note">Playing from the makers' official YouTube channel.</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
