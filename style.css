@@ -183,6 +183,12 @@ button { font: inherit; cursor: pointer; }
   text-align: center; color: var(--muted); font-size: 16px;
 }
 
+.tmdb-note {
+  margin: 32px 0; padding: 18px 20px; border: 1px solid rgba(229, 9, 20, 0.45);
+  border-radius: var(--radius); background: rgba(229, 9, 20, 0.10);
+  color: #ffd7d9; font-size: 15px;
+}
+
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid rgba(255, 255, 255, 0.08); padding-block: 28px 36px; margin-top: 64px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
