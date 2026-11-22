@@ -82,11 +82,100 @@ const TITLES = [
     youtubeLabel: "Watch trailer",
     youtubeNote: "Official trailer — Highlights Nepal (embedding allowed)",
   },
+  {
+    id: 5,
+    title: "Chhakka Panja",
+    type: "movie",
+    genre: "Comedy",
+    year: 2016,
+    minutes: 138,
+    desc: "Five friends — Raja, Saraswoti, Magne, Buddhi and Chams — chase money and marriage in this blockbuster Nepali comedy.",
+    youtubeId: "rN6VfMy-sFs",
+    youtubeLabel: "Watch full movie",
+    youtubeNote: "Full movie, officially uploaded — Highlights Nepal (embedding allowed)",
+  },
+  {
+    id: 6,
+    title: "Jatra",
+    type: "movie",
+    genre: "Comedy, Crime",
+    year: 2016,
+    minutes: 150,
+    desc: "Phadindra finds a sack full of three crores of stolen rupees and turns to his friends to find where the money came from.",
+    youtubeId: "SLTQeRlb0dk",
+    youtubeLabel: "Watch full movie",
+    youtubeNote: "Full movie, officially uploaded — Highlights Nepal",
+  },
+  {
+    id: 7,
+    title: "Jatrai Jatra",
+    type: "movie",
+    genre: "Comedy",
+    year: 2019,
+    minutes: 138,
+    desc: "The Jatra gang returns — Bipin Karki, Dayahang Rai and Rabindra Singh Baniya in the superhit sequel.",
+    youtubeId: "g1JneMhJQ18",
+    youtubeLabel: "Watch full movie",
+    youtubeNote: "Full movie, officially uploaded — OSR Digital",
+  },
+  {
+    id: 8,
+    title: "Chhakka Panja 3",
+    type: "movie",
+    genre: "Comedy",
+    year: 2020,
+    minutes: 140,
+    desc: "Deepak Raj Giri, Deepika Prasain and Priyanka Karki return in the third Chhakka Panja full movie.",
+    youtubeId: "F9fY5tCg2vc",
+    youtubeLabel: "Watch full movie",
+    youtubeNote: "Full movie, officially uploaded — Highlights Nepal",
+  },
 ];
 
 // TMDB catalogue baked in by Muse via the TMDB connector on 2026-11-22.
 // Posters/trailers from TMDB; no API key is exposed on the live site.
 const TMDB_CATALOGUE = {"trending": [{"id": 1368337, "title": "The Odyssey", "year": "2026", "rating": 8.0, "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is f", "poster": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg", "youtubeId": "AyIZ9tiiN8I"}, {"id": 1300968, "title": "The Hunger Games: Sunrise on the Reaping", "year": "2026", "rating": 7.6, "overview": "Return to the world of Panem 24 years before Katniss Everdeen volunteers in her sister's place, commencing on the morning of the reaping of ", "poster": "/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg", "youtubeId": "Dr060OLTodE"}, {"id": 1003596, "title": "Avengers: Doomsday", "year": "2026", "rating": 0, "overview": "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've eve", "poster": "/cWXtJhrlruF8CeYuaBGE8vdj3Q9.jpg", "youtubeId": "X1aFkAkFASk"}, {"id": 1185344, "title": "The Beast", "year": "2026", "rating": 4.9, "overview": "When a militia of unidentified hostiles coordinates a coup against the United States, the president must fight back by utilizing the highly ", "poster": "/ocg5JfJP19fodcv5uQUApkmZMdI.jpg", "youtubeId": "5ckqV_uf8E0"}, {"id": 1595124, "title": "Steps", "year": "2026", "rating": 6.6, "overview": "After being blamed for disrupting the Royal Ball with a stolen magic wand, a misunderstood stepsister accidentally turns her sister into a f", "poster": "/jtfCcWZ3ZyKdgi0u7JVOxEOSSJP.jpg", "youtubeId": "tNV4i3BqUGY"}], "bollywood": [{"id": 656908, "title": "Ramayana: Rise of a Legend", "year": "2026", "rating": 7.4, "overview": "An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their sto", "poster": "/vBQ7wks68OhJKlb3RnXSl2yXBXK.jpg", "youtubeId": "AYkPRN874m8"}, {"id": 1453407, "title": "Gajab Raat", "year": "2026", "rating": 6.1, "overview": "A corrupt, troubled cop's night spirals out of control when a reluctant act of mercy toward an injured girl pulls him into a deadly web of c", "poster": "/e4N7M52cBbyi24xLga8yI6yt1u1.jpg", "youtubeId": "BwFuJbHNE4o"}, {"id": 1389172, "title": "Reporting Live", "year": "2026", "rating": 7.1, "overview": "A young reporter and her reluctant cameraman chase a story, only to get entangled in an illegal sand-mining racket run by a ruthless syndica", "poster": "/xVabS4lTi6IMscr2FOucxydE6ZD.jpg", "youtubeId": "GgGNG9XEJds"}, {"id": 1215889, "title": "Daayra", "year": "2026", "rating": 6.4, "overview": "Raman, who has had a shady record with staged encounters and police brutality, finds himself cornered as Ajooni challenges him on every step", "poster": "/eAsR8oCZGCOqaxDVt0c0WrRFjrn.jpg", "youtubeId": "nb4Qb89zgmU"}, {"id": 1291608, "title": "Dhurandhar", "year": "2025", "rating": 7.3, "overview": "In the early 2000s, an undercover operative infiltrates Karachi's underworld, breaking into its inner circle to dismantle a violent nexus fr", "poster": "/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg", "youtubeId": "o--C7AH5SuI"}, {"id": 1493572, "title": "Parivarik ManuRanjan", "year": "2026", "rating": 5.3, "overview": "Ranjan Dubey, Lucknow's most eligible bachelor, finds his search for a bride taking an unexpected turn when Helen, his charming new househel", "poster": "/2gKGkD0pN2Ss9LrHA6tv5hEjHOs.jpg", "youtubeId": "ym4y_aPk0io"}], "hollywood": [{"id": 1726, "title": "Iron Man", "year": "2008", "rating": 7.7, "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.", "poster": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg", "youtubeId": "8ugaeA-nMTc"}, {"id": 1368337, "title": "The Odyssey", "year": "2026", "rating": 8.0, "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is f", "poster": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg", "youtubeId": "AyIZ9tiiN8I"}, {"id": 1263337, "title": "Heart of the Beast", "year": "2026", "rating": 7.8, "overview": "After a harrowing plane crash, Special Forces officer James Belmont and his combat dog, Odin, find themselves stranded deep in the Alaskan w", "poster": "/6sYemVUn79UPKz1ZsSG6kPU4RVy.jpg", "youtubeId": "UkMuGKqAux4"}, {"id": 1300968, "title": "The Hunger Games: Sunrise on the Reaping", "year": "2026", "rating": 7.7, "overview": "Return to the world of Panem 24 years before Katniss Everdeen volunteers in her sister's place, commencing on the morning of the reaping of ", "poster": "/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg", "youtubeId": "Dr060OLTodE"}, {"id": 1400837, "title": "Other Mommy", "year": "2026", "rating": 6.5, "overview": "Young Bela forms a relationship with a sinister entity in her home that looks uncannily like her own mother, drawing her into a terrifying a", "poster": "/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg", "youtubeId": "-mnTITqqiT0"}, {"id": 969681, "title": "Spider-Man: Brand New Day", "year": "2026", "rating": 8.5, "overview": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—s", "poster": "/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg", "youtubeId": "P3uI5sLosKU"}], "disney": [{"id": 1108427, "title": "Moana", "year": "2026", "rating": 7.4, "overview": "Teenage Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with infamous demigod Maui ", "poster": "/gaet1xQ2nxrG0V1Ep9T20ZMNEIC.jpg", "youtubeId": "EEz5xbzYPKI"}, {"id": 8587, "title": "The Lion King", "year": "1994", "rating": 8.2, "overview": "Young lion prince Simba, eager to one day become king of the Pride Lands, grows up under the watchful eye of his father Mufasa; all the whil", "poster": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg", "youtubeId": "UgjEj5mXLlk"}, {"id": 22, "title": "Pirates of the Caribbean: The Curse of the Black Pearl", "year": "2003", "rating": 7.8, "overview": "When wily pirate Captain Barbossa seizes Jack Sparrow’s beloved ship, the Black Pearl, and kidnaps the governor’s daughter, Elizabeth Swann,", "poster": "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg", "youtubeId": "-9HT0l9HV4c"}, {"id": 411, "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", "year": "2005", "rating": 7.1, "overview": "Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.", "poster": "/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg", "youtubeId": "3mKPrxjwF7A"}, {"id": 58, "title": "Pirates of the Caribbean: Dead Man's Chest", "year": "2006", "rating": 7.4, "overview": "Captain Jack Sparrow’s got a blood debt to pay: he owes his soul to the legendary Davy Jones, ghastly Ruler of the Ocean Depths. To escape e", "poster": "/uXEqmloGyP7UXAiphJUu2v2pcuE.jpg", "youtubeId": "9SFWn9taQTw"}, {"id": 38757, "title": "Tangled", "year": "2010", "rating": 7.6, "overview": "Feisty teenager Rapunzel, who has long and magical hair, wants to go and see sky lanterns on her eighteenth birthday, but she's bound to a t", "poster": "/ym7Kst6a4uodryxqbGOxmewF235.jpg", "youtubeId": "gsYKF8ecC8g"}]};
+
+
+// ---------- INTERNET ARCHIVE — FULL CLASSIC MOVIES (PUBLIC DOMAIN) ----------
+// Identifiers verified on archive.org 2026-11-22. Embeds at
+// https://archive.org/embed/<identifier> — no API key needed.
+const ARCHIVE_MOVIES = [
+  { identifier: "1968-night-of-the-living-dead", title: "Night of the Living Dead", year: 1968, genre: "Horror", desc: "Seven strangers take shelter in a farmhouse as the dead rise. A horror classic, now public domain." },
+  { identifier: "nosferatu-1922-silent-movie", title: "Nosferatu", year: 1922, genre: "Horror, Silent", desc: "F. W. Murnau's silent vampire classic — Count Orlok comes to town." },
+  { identifier: "Metropolis1927_201312", title: "Metropolis", year: 1927, genre: "Sci-Fi, Silent", desc: "Fritz Lang's city of the future — workers below, planners above, and a robot in between." },
+  { identifier: "The_General_Buster_Keaton", title: "The General", year: 1926, genre: "Comedy, Silent", desc: "Buster Keaton chases his stolen locomotive single-handedly through the Civil War." },
+  { identifier: "le-voyage-dans-la-lune-1902", title: "A Trip to the Moon", year: 1902, genre: "Sci-Fi, Silent", desc: "Georges Méliès' 1902 voyage to the moon — the first science-fiction film." },
+];
+
+function archiveCard(m) {
+  const thumb = "https://archive.org/services/img/" + m.identifier;
+  return (
+    '<article class="movie-card archive-card" data-archive-id="' + m.identifier + '" tabindex="0" role="button" aria-label="Watch full movie ' + esc(m.title) + '">' +
+      '<div class="movie-poster"><img src="' + thumb + '" alt="Poster for ' + esc(m.title) + '" loading="lazy">' +
+      '<span class="play-badge" aria-hidden="true">▶</span></div>' +
+      '<div class="movie-body">' +
+        '<h3>' + esc(m.title) + '</h3>' +
+        '<p class="movie-meta">' + m.year + ' · ' + esc(m.genre) + ' · Internet Archive</p>' +
+        '<p class="movie-desc">' + esc(m.desc) + '</p>' +
+        '<button class="btn btn-primary watch-btn" type="button" data-archive-id="' + m.identifier + '">Watch full movie</button>' +
+        '<p class="movie-note">Full movie, free — public domain, Internet Archive</p>' +
+      '</div>' +
+    '</article>'
+  );
+}
+
+function renderArchive() {
+  const grid = document.getElementById("archiveGrid");
+  if (!grid) return;
+  const list = ARCHIVE_MOVIES.filter((m) => {
+    if (!movieSearchText) return true;
+    return (m.title + " " + m.genre + " " + m.desc + " " + m.year).toLowerCase().includes(movieSearchText);
+  });
+  grid.innerHTML = list.map(archiveCard).join("");
+  const wrap = document.getElementById("archiveRows");
+  if (wrap) wrap.hidden = list.length === 0 && !!movieSearchText;
+}
 
 // ---------- 2. MOVIES SEARCH — ONLY ON movies.html ----------
 const movieGrid = document.getElementById("movieGrid");
@@ -131,7 +220,7 @@ function movieCard(item) {
       '<span class="play-badge" aria-hidden="true">▶</span></div>' +
       '<div class="movie-body">' +
         '<h3>' + esc(item.title) + '</h3>' +
-        '<p class="movie-meta">' + item.year + ' · ' + esc(item.genre) + ' · ★ ' + item.rating.toFixed(1) + '</p>' +
+        '<p class="movie-meta">' + item.year + ' · ' + esc(item.genre) + (typeof item.rating === "number" ? ' · ★ ' + item.rating.toFixed(1) : '') + '</p>' +
         '<p class="movie-desc">' + esc(item.desc) + '</p>' +
         '<button class="btn btn-primary watch-btn" type="button" data-id="' + item.id + '">' + esc(item.youtubeLabel) + '</button>' +
         '<p class="movie-note">' + esc(item.youtubeNote) + '</p>' +
@@ -278,6 +367,7 @@ async function runSearch() {
     if (found) { showToast("Searching TMDB"); return; }
   }
   renderMovies();
+  renderArchive();
   if (tmdbRows && TMDB_API_KEY) tmdbRows.hidden = !!movieSearchText;
   showToast(movieSearchText ? "Searching movies" : "Showing all movies");
 }
@@ -304,7 +394,19 @@ const playerClose = document.getElementById("playerClose");
 function openPlayerByYoutubeId(title, youtubeId, label) {
   if (!playerModal || !playerFrame || !youtubeId) return;
   playerTitle.textContent = title + " — " + label;
+  const note = document.getElementById("playerNote");
+  if (note) note.textContent = "Playing from the makers' official YouTube channel.";
   playerFrame.src = "https://www.youtube.com/embed/" + youtubeId + "?autoplay=1&rel=0";
+  playerModal.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+function openArchivePlayer(identifier, title) {
+  if (!playerModal || !playerFrame || !identifier) return;
+  playerTitle.textContent = title + " — Watch full movie";
+  const note = document.getElementById("playerNote");
+  if (note) note.textContent = "Full movie, free — public domain, playing from the Internet Archive.";
+  playerFrame.src = "https://archive.org/embed/" + identifier;
   playerModal.hidden = false;
   document.body.style.overflow = "hidden";
 }
@@ -334,6 +436,11 @@ function closePlayer() {
 
 function handleCardClick(card) {
   if (!card) return;
+  if (card.dataset.archiveId) {
+    const titleEl = card.querySelector("h3");
+    openArchivePlayer(card.dataset.archiveId, titleEl ? titleEl.textContent : "Movie");
+    return;
+  }
   if (card.dataset.tmdbId) {
     const titleEl = card.querySelector("h3");
     openTmdbPlayer(Number(card.dataset.tmdbId), titleEl ? titleEl.textContent : "Movie", card.dataset.youtubeId || "");
@@ -346,6 +453,14 @@ function handleCardClick(card) {
 if (movieGrid) {
   movieGrid.addEventListener("click", (event) => handleCardClick(event.target.closest(".movie-card")));
   movieGrid.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") handleCardClick(event.target.closest(".movie-card"));
+  });
+}
+
+const archiveGrid = document.getElementById("archiveGrid");
+if (archiveGrid) {
+  archiveGrid.addEventListener("click", (event) => handleCardClick(event.target.closest(".movie-card")));
+  archiveGrid.addEventListener("keydown", (event) => {
     if (event.key === "Enter") handleCardClick(event.target.closest(".movie-card"));
   });
 }
@@ -369,4 +484,5 @@ document.addEventListener("keydown", (event) => {
 
 // ---------- 5. FIRST DRAW (movies page only) ----------
 renderMovies();
+renderArchive();
 loadTmdbRows();

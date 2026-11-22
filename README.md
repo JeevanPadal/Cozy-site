@@ -6,7 +6,7 @@ A clean, dark, premium home for movies and TV shows, with a separate page for ea
 - `movies.html` — Movies only, with a movies-only search and Netflix-style cards. Click a card to watch it in a player on the site. TMDB rows: Trending, Bollywood, Hollywood and Disney, baked in from TMDB.
 - `shows.html` — TV Shows only, empty for now. No movies on this page.
 
-Movies play from the makers' official YouTube channels only — no download links, no pirated copies. Four Nepali movies so far: Pashupati Prasad (trailer), Kabaddi Kabaddi (full movie), Loot (trailer), Chhakka Panja 2 (trailer). TMDB adds catalogue data, posters and trailers for thousands of titles — not full movies to stream.
+Movies play from the makers' official YouTube channels only — no download links, no pirated copies. Eight Nepali movies so far: Pashupati Prasad (trailer), Kabaddi Kabaddi (full movie), Loot (trailer), Chhakka Panja 2 (trailer), Chhakka Panja (full movie), Jatra (full movie), Jatrai Jatra (full movie), Chhakka Panja 3 (full movie). TMDB adds catalogue data, posters and trailers for thousands of titles — not full movies to stream. The Internet Archive adds full public-domain classic movies (Night of the Living Dead, Nosferatu, Metropolis, The General, A Trip to the Moon) that play in full on the site.
 
 ## How to use
 

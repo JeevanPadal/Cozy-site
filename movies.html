@@ -48,6 +48,12 @@
     <section class="grid" id="movieGrid" aria-live="polite"></section>
     <p class="empty-state" id="movieEmptyState">No movies added yet. We will add movies together later.</p>
 
+    <!-- ======================= INTERNET ARCHIVE — FULL CLASSIC MOVIES ======================= -->
+    <div id="archiveRows">
+      <div class="results-head"><h2>Full classic movies — Internet Archive</h2><p>Watch the whole film, free</p></div>
+      <section class="grid" id="archiveGrid" aria-live="polite"></section>
+    </div>
+
     <!-- ======================= TMDB — BIG CATALOGUE ======================= -->
     <p class="tmdb-note" id="tmdbNotice" hidden>Big catalogue loading from TMDB…</p>
     <div id="tmdbRows" hidden>
@@ -65,7 +71,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <p><strong>The Cozy Reel</strong> — made for slow evenings.</p>
-      <p class="muted">Movies play here from the makers' official YouTube channels. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      <p class="muted">Movies play here from the makers' official YouTube channels and from the Internet Archive (public-domain classics). This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
     </div>
   </footer>
 
@@ -81,7 +87,7 @@
       <div class="player-frame-wrap">
         <iframe id="playerFrame" src="" title="Movie player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <p class="player-note">Playing from the makers' official YouTube channel.</p>
+      <p class="player-note" id="playerNote">Playing from the makers' official YouTube channel.</p>
     </div>
   </div>
 
